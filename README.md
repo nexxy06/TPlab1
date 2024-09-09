@@ -1,0 +1,1 @@
+https://administratormisis-my.sharepoint.com/:w:/g/personal/m2306029_edu_misis_ru/EbQSiFOHpd1Fvc8x7kSZN6QBFC-xnOmgZLXOyquqGvKnow?e=niGqzT
