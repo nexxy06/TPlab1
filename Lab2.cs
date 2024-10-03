@@ -61,7 +61,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         public override bool IsBuilt() => true;
         public void Attack(Unit unit)
         {
-            Console.WriteLine($"{GetName()} атакует {unit.GetName()}!");
+            Console.WriteLine($"{GetName()} атакует {unit.GetName()}");
         }
     }
 
