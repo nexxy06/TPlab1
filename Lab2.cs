@@ -8,7 +8,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
         public string Name { get; private set; }
         public int X { get; private set; }
         public int Y { get; private set; }
-
         public GameObject(int id, string name, int x, int y)
         {
             Id = id;
@@ -26,26 +25,23 @@ namespace MyApp // Note: actual namespace depends on the project name.
     abstract class Building: GameObject
     {
         public Building(int id, string name, int x, int y) : base(id, name, x, y) { }
-
         public abstract bool IsBuilt();
     }
 
     abstract class Unit: GameObject
     {
         public float Hp { get; private set; }
-
         public Unit(int id, string name, int x, int y, float hp) : base(id, name, x, y)
         {
             Hp = hp;
         }
-
         public bool IsAlive() => Hp > 0;
         public float GetHp() => Hp;
-
         public void Damage(float damage)
         {
             Hp -= damage;
-            if (Hp < 0) Hp = 0;
+            if (Hp < 0) 
+                Hp = 0;
         }
     }
 
@@ -62,9 +58,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
     class Fort: Building, Attacker
     {
         public Fort(int id, string name, int x, int y) : base(id, name, x, y) { }
-
         public override bool IsBuilt() => true;
-
         public void Attack(Unit unit)
         {
             Console.WriteLine($"{GetName()} атакует {unit.GetName()}!");
@@ -74,9 +68,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
     class MobileHome: Building, Moveable
     {
         public MobileHome(int id, string name, int x, int y) : base(id, name, x, y) { }
-
         public override bool IsBuilt() => true;
-
         public void Move(int newX, int newY)
         {
             Console.WriteLine($"{GetName()} перемещение на ({newX}, {newY})");
@@ -86,16 +78,14 @@ namespace MyApp // Note: actual namespace depends on the project name.
     class Archer: Unit, Attacker, Moveable
     {
         public Archer(int id, string name, int x, int y, float hp) : base(id, name, x, y, hp) { }
-
         public void Attack(Unit unit)
         {
             Console.WriteLine($"{GetName()} стреляет в {unit.GetName()}");
             unit.Damage(10);
         }
-
         public void Move(int newX, int newY)
         {
-            Console.WriteLine($"{GetName()} перемещается на ({newX}, {newY})!");
+            Console.WriteLine($"{GetName()} перемещение на ({newX}, {newY})");
         }
     }
     internal class Lab2
