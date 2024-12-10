@@ -39,7 +39,7 @@ session.commit()
 
 # Read
 bikes_from_db = session.query(Category).filter_by(name="bike").first()
-print(bikes_from_db.name, bikes_from_db.products[0].name)
+print("Категория: {} \n Товар: {} \n Цена: {}".format(bikes_from_db.name, bikes_from_db.products[0].name, bikes_from_db.products[0].price))
 
 # Update
 bikes_from_db.name = "bike new"
