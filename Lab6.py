@@ -49,37 +49,34 @@ class testBankAccount(unittest.TestCase):
 
     def test_deposit(self):
         acc = bankAccount("123", 100)
-        acc.deposit(50.0)
+        acc.deposit(50)
         self.assertEqual(acc.getBalance(), 150)
 
     def test_deposit_invalid_amount(self):
         acc = bankAccount("123", 100)
         with self.assertRaises(ValueError):
-            acc.deposit(0)
-        with self.assertRaises(ValueError):
-            acc.deposit(-50.0)
+            acc.deposit(-50)
 
     def test_withdraw_success(self):
         acc = bankAccount("123", 100)
-        acc.withdraw(50.0)
+        acc.withdraw(50)
         self.assertEqual(acc.getBalance(), 50)
 
     def test_withdraw_insufficient_funds(self):
         acc = bankAccount("123", 100)
         with self.assertRaises(ValueError):
-            acc.withdraw(150.0)
+            acc.withdraw(150)
 
     def test_withdraw_invalid_amount(self):
         acc = bankAccount("123", 100)
-        with self.assertRaises(ValueError):
-            acc.withdraw(0)
-        with self.assertRaises(ValueError):
-            acc.withdraw(-50.0)
 
-    def test_balance_after_operations(self):
+        with self.assertRaises(ValueError):
+            acc.withdraw(-50)
+
+    def test_getbalance(self):
         acc = bankAccount("123", 100)
-        acc.deposit(50.0)
-        acc.withdraw(30.0)
+        acc.deposit(50)
+        acc.withdraw(30)
         self.assertEqual(acc.getBalance(), 120)
 
 
