@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import MagicMock
 
 
 class bankAccount:
@@ -24,6 +25,11 @@ class bankAccount:
         return self.balance
 
 
+class Clients:
+    def get_accNumber(self, id):
+        pass
+
+
 try:
     acc = bankAccount("123", 100)
     print(f"initial balance: {acc.getBalance()}")
@@ -38,6 +44,13 @@ except ValueError as e:
 
 
 class testBankAccount(unittest.TestCase):
+    def setUp(self):
+        self.mock_db = MagicMock(Clients)
+
+    def test_get_(self):
+        self.mock_db.get_accNumber.return_value = {'id': 1, 'num': '32'}
+        result = self.mock_db.get_accNumber(1)
+        assert result == {'id': 1, 'num': '32'}
 
     def test_positive_balance(self):
         acc = bankAccount("123", 100)
