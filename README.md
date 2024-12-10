@@ -4,4 +4,4 @@
 4 лаба: https://docs.google.com/document/d/1xobAUVKT4N5RC0jzlt_YxIob3FHeMNIm/edit?usp=sharing&ouid=105734998160093184072&rtpof=true&sd=true  
 5 лаба: https://docs.google.com/document/d/1r6MSEfv6JNeifI7g1F7FW97c6y7K0fNV/edit?usp=sharing&ouid=105734998160093184072&rtpof=true&sd=true  
 6 лаба: https://docs.google.com/document/d/1-VqOOPfUU2bne5MckbUOJbWk1qOrofgN/edit?usp=sharing&ouid=105734998160093184072&rtpof=true&sd=true  
-7 лаба: 
+7 лаба: https://docs.google.com/document/d/1RsEIM6ycc0kbdRWD71_c8CxZwf-Hyk9r/edit?usp=sharing&ouid=105734998160093184072&rtpof=true&sd=true
