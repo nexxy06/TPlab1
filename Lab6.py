@@ -47,7 +47,7 @@ class testBankAccount(unittest.TestCase):
     def setUp(self):
         self.mock_db = MagicMock(Clients)
 
-    def test_get_(self):
+    def test_get_accNum(self):
         self.mock_db.get_accNumber.return_value = {'id': 1, 'num': '32'}
         result = self.mock_db.get_accNumber(1)
         assert result == {'id': 1, 'num': '32'}
